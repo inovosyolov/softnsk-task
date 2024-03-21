@@ -1,0 +1,60 @@
+.header {
+    position: fixed;
+    padding: 33.5px 0 31.5px;
+    width: 100%;
+    background-color: $header-color;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    &__nav {
+        &-list {
+            @include list-reset;
+            display: flex;
+            gap: 60px;
+        }
+
+        &-link {
+            position: relative;
+            font-size: 13px;
+            line-height: 1.2em;
+            text-transform: uppercase;
+            color: $white-color;
+            transition: color;
+
+            &_active {
+                color: $active-color;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: $blue-color;
+                transition: width 0.3s ease-out;
+            }
+
+            &:focus-visible {
+                outline-offset: 5px;
+                outline: 2px solid $blue-color;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            &:active {
+                color: $active-color;
+            }
+        }
+    }
+}
