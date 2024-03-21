@@ -1,12 +1,15 @@
 $header-color: rgba(16, 16, 29, 0.9);
-$order-section-color: rgba(61, 64, 80, 1);
-$footer-color: rgba(61, 64, 80, 1);
+$order-section-color: #272733;
+$footer-color: #3D4050;
 $active-color: #43ABF0;
-$payments-color: rgba(195, 195, 195, 1);
+$payments-color: #C3C3C3;
 
 $white-color: #FFF;
 $black-color: #000;
 $blue-color: #3E9CDC;
-$grey-color: rgba(61, 64, 80, 1);
+$grey-color: #BBB;
+
+$transition-timing: .15s;
+$transition-curve: ease-in-out;
 
 $main-font-family: "Lato", sans-serif;

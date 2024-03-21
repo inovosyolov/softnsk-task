@@ -10,11 +10,16 @@
         align-items: center
     }
 
+    &__logo {
+        width: 247px;
+        height: 35px;
+    }
+
     &__nav {
         &-list {
             @include list-reset;
             display: flex;
-            gap: 60px;
+            gap: 62px;
         }
 
         &-link {
@@ -38,7 +43,7 @@
                 width: 0;
                 height: 2px;
                 background-color: $blue-color;
-                transition: width 0.3s ease-out;
+                transition: width $transition-timing $transition-curve;
             }
 
             &:focus-visible {

@@ -13,8 +13,8 @@
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
-                <a href="#" class="logo">
-                    <svg class="logo__icon" xmlns="http://www.w3.org/2000/svg" aria-label="Логотип компании Loremipsum">
+                <a href="#" class="header__logo logo" aria-label="Логотип компании Loremipsum">
+                    <svg class="logo__icon" xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="img/sprite.svg#logo"></use>
                     </svg>
                 </a>
@@ -48,12 +48,46 @@
     <main class="main">
         <section class="intro">
             <div class="container">
-
+                <div class="intro__wrapper">
+                    <h1 class="intro__title">
+                        <span class="intro__title intro__title_blue">
+                            Lorem ipsum
+                        </span>
+                        dolor sit ametconsectetur
+                        <span class="intro__title intro__title_blue">
+                            adipiscing
+                        </span>
+                    </h1>
+                    <div class="intro__content">
+                        <span class="intro__content-summary">
+                            At&nbsp;vero eos et&nbsp;accusamus et&nbsp;iusto odio dignissimos ducimus!
+                        </span>
+                        <ul class="intro__content-list">
+                            <li class="intro__content-item">
+                                Totam rem aperiam eaque ipsa
+                            </li>
+                            <li class="intro__content-item">
+                                Sit voluptatem accusantium doloremque laudantium
+                            </li>
+                            <li class="intro__content-item">
+                                Sed ut&nbsp;perspiciatis, unde omnis iste natus error
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="intro__content-buttons-wrap">
+                        <a href="#order-section" class="button intro__content-button" aria-label="Кнопка перехода на секцию оформления заказа">
+                            Заказать
+                        </a>
+                        <a href="#" class="button intro__content-button intro__content-button_white" aria-label="Кнопка открытия подробной информации">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="order">
+        <section class="order" id="order-section">
             <div class="container">
-
+                
             </div>
         </section>
     </main>
