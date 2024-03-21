@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+body {
+    min-width: 320px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 1232px;
+}
+
+.stop-scroll {
+    overflow: hidden;
+}
