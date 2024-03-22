@@ -1,0 +1,98 @@
+.select-menu {
+    grid-area: select-menu;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 10px;
+        width: 100%;
+        color: $order-section-color;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid $white-color;
+        border-radius: 3px;
+    }
+
+    &__arrow-icon {
+        width: 20px;
+        height: 5.2px;
+        fill: $black-color;
+        transition: transform $transition-timing $transition-curve, fill $transition-timing $transition-curve;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.2em;
+        user-select: none;
+        transition: color $transition-timing $transition-curve;
+    }
+
+    &__list {
+        position: absolute;
+        width: 100%;
+        height: 190px;
+        bottom: -208px;
+        display: none;
+        gap: 10px;
+        flex-direction: column;
+        background-color: #272733;
+        border: 1px solid #3D4050;
+        border-radius: 3px;
+        padding: 6px 10px 10px 10px;
+        list-style-type: none;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        color: #FFF;
+        font-size: 18px;
+
+        &::-webkit-scrollbar {
+            width: 7px;
+            background: #3D4050;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            width: 7px;
+            height: 53px;
+            background: $blue-color;
+            border-radius: 3px;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__item {
+        display: block;
+        padding: 7px 0;
+        font-weight: 400;
+        font-size: 17px;
+        color: #FFF;
+        user-select: none;
+        transition: color $transition-timing $transition-curve;
+
+        &:hover {
+            color: #42A9ED;
+            cursor: pointer;
+        }
+    }
+
+    &.active {
+        .select-menu__header {
+            background: #3D4050;
+            border-radius: 3px 3px 0px 0px;
+            border: 1px solid #3D4050;
+            color: #FFF;
+        }
+
+        .select-menu__arrow-icon {
+            transform: rotate(180deg);
+            fill: $white-color;
+        }
+    }
+}

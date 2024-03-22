@@ -1,0 +1,38 @@
+.order {
+    background: #272733 url(../img/order-bg.png) no-repeat center / cover;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 80px;
+        padding: 120px 0 150px 0;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    
+        &-title {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2em;
+            text-transform: uppercase;
+            color: $white-color;
+
+            &_blue {
+                color: $blue-color;
+            }
+        }
+
+        &-summary {
+            font-size: 18px;
+            line-height: 1.2em;
+            color: $grey-color;
+        }
+    }
+}

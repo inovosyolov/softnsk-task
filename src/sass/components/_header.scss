@@ -3,6 +3,7 @@
     padding: 33.5px 0 31.5px;
     width: 100%;
     background-color: $header-color;
+    z-index: 1000;
 
     &__wrapper {
         display: flex;

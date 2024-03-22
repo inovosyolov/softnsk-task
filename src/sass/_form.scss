@@ -1,0 +1,81 @@
+.form {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "select-menu email name" 
+    "slider slider file" 
+    ". button .";
+    gap: 30px;
+    width: 100%;
+
+    &__input {
+        padding: 12px 10px;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        background: #DFDFE0;
+        border: 1px solid #DFDFE0;
+        border-radius: 3px;
+        color: $order-section-color;
+        outline: none;
+
+        &::placeholder {
+            color: inherit;
+        }
+
+        &_email {
+            grid-area: email;
+        }
+
+        &_name {
+            grid-area: name;
+        }
+
+        &_file {
+            grid-area: file;
+        }
+    }
+
+    &__file {
+        &-input {
+            display: none;
+        }
+
+        &-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 48px;
+            color: $order-section-color;
+            background: $white-color;
+            border: 2px solid $white-color;
+            border-radius: 3px;
+            transition: border-color $transition-timing $transition-curve;
+
+            &:hover {
+                border-color: $blue-color;
+                cursor: pointer;
+            }
+        }
+
+        &-icon {
+            width: 17px;
+        }
+
+        &-text {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 18px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__button {
+        grid-area: button;
+        padding: 14px;
+        font-size: 15px;
+    }
+}

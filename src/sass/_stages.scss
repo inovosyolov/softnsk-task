@@ -1,0 +1,102 @@
+.stages {
+    overflow-x: auto;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        min-width: 1170px;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 5px;
+        width: 209px;
+    }
+
+    &__circle {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background-color: $blue-color;
+        border-radius: 50%;
+        border: 5px solid #286690;
+
+        &-icon {
+            display: block;
+            max-width: 50px;
+            max-height: 50px;
+
+            &_search {
+                width: 34px;
+                height: 34px;
+            }
+
+            &_percent {
+                width: 31px;
+                height: 31px;
+            }
+
+            &_file {
+                width: 39px;
+                height: 42px;
+            }
+
+            &_mail {
+                width: 36px;
+                height: 29px;
+            }
+
+            &_money {
+                width: 39px;
+                height: 26px;
+            }
+        }
+    }
+
+    &__text {
+        width: 188px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: $white-color;
+    }
+
+    &__dots {
+        &-list {
+            @include list-reset;
+            position: absolute;
+            left: 110px;
+            display: flex;
+            gap: 20px;
+        }
+
+        &-item {
+            width: 6px;
+            height: 6px;
+            background: #C4C4C4;
+            border-radius: 50%;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        height: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #3D4050;
+        border: 0;
+        border-radius: 15px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $blue-color;
+        border-radius: 15px;
+    }
+}

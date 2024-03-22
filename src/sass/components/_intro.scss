@@ -1,5 +1,6 @@
 .intro {
     background: url(../img/main-bg.jpg) no-repeat center / cover;
+    line-height: 1.2em;
 
     &__wrapper {
         display: flex;
@@ -13,8 +14,8 @@
         max-width: 780px;
         font-size: 48px;
         font-weight: 700;
-        line-height: 1.2em;
         color: $black-color;
+        line-height: 1.2em;
         text-transform: uppercase;
 
         &_blue {
@@ -59,6 +60,8 @@
         }
 
         &-button {
+            max-width: 183px;
+            
             &_white {
                 color: #2A2B30;
                 background: $white-color;
