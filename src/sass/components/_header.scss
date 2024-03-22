@@ -3,6 +3,7 @@
     padding: 33.5px 0 31.5px;
     width: 100%;
     background-color: $header-color;
+    transition: padding $transition-timing $transition-curve;
     z-index: 1000;
 
     &__wrapper {
@@ -62,5 +63,9 @@
                 color: $active-color;
             }
         }
+    }
+
+    &.sticky {
+        padding: 10px;
     }
 }
