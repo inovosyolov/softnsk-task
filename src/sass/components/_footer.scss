@@ -1,0 +1,81 @@
+.footer {
+    background: $footer-color;
+  
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+  
+    &__text {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.2em;
+        color: $white-color;
+        transition: color $transition-timing $transition-curve;
+
+        &_payments {
+            color: $payments-color;
+        }
+    }
+
+    &__separator {
+        content: '';
+        width: 1px;
+        height: 18px;
+        background: $payments-color;
+    }   
+
+    &__list {
+        @include list-reset;
+        display: flex;
+        gap: 38px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &:hover {
+            & .footer__icon {
+                transform: rotateZ(360deg);
+            }
+
+            & .footer__text {
+                color: $blue-color
+            }
+        }
+    }
+
+    &__icon {
+        transform: rotateZ(0);
+        transition: transform .4s $transition-curve;
+
+        &_qiwi {
+            width: 21px;
+            height: 20px;
+        }
+
+        &_yamoney {
+            width: 15px;
+            height: 18px;
+        }
+
+        &_wm {
+            width: 19px;
+            height: 18px;
+        }
+
+        &_mail {
+            width: 16px;
+            height: 13px;
+        }
+
+        &_vk {
+            width: 12px;
+            height: 14px;
+        }
+    }
+}
