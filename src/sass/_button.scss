@@ -12,12 +12,25 @@
     background: $blue-color;
     border: 1px solid $white-color;
     border-radius: 4px;
+    outline: none;
     cursor: pointer;
-    transition: color $transition-timing $transition-curve, background-color $transition-timing $transition-curve, border-color $transition-timing $transition-curve, ;
+    transition: color $transition-timing $transition-curve, background-color $transition-timing $transition-curve, border-color $transition-timing $transition-curve;
+
+    &:focus-visible {
+        color: $blue-color;
+        background-color: $white-color;
+        border-color: $blue-color;
+    }
 
     &:hover {
         color: $blue-color;
         background-color: $white-color;
         border-color: $blue-color;
+    }
+
+    &:active {
+        color: $white-color;
+        background-color: $active-color;
+        border-color: $white-color;
     }
 }

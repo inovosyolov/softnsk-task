@@ -10,3 +10,8 @@
     border: none;
     cursor: pointer;
 }
+
+@mixin focus-effect {
+    outline-offset: 5px;
+    outline: 2px solid $blue-color;
+}

@@ -38,6 +38,10 @@
         align-items: center;
         gap: 10px;
 
+        &:focus-visible {
+            @include focus-effect;
+        }
+
         &:hover {
             & .footer__icon {
                 transform: rotateZ(360deg);
@@ -50,6 +54,7 @@
     }
 
     &__icon {
+        fill: $blue-color;
         transform: rotateZ(0);
         transition: transform .4s $transition-curve;
 

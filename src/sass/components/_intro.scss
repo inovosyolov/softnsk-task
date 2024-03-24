@@ -66,11 +66,23 @@
                 color: #2A2B30;
                 background: $white-color;
                 border-color: #6F6D7B;
+                outline: none;
+
+                &:focus-visible {
+                    color: $white-color;
+                    background: #6F6D7B;
+                    border-color: #6F6D7B;
+                }
 
                 &:hover {
                     color: $white-color;
                     background: #6F6D7B;
                     border-color: #6F6D7B;
+                }
+
+                &:active {
+                    background: $white-color;
+                    color: #2A2B30;
                 }
             }
         }
