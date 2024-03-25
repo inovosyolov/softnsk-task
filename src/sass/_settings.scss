@@ -43,3 +43,10 @@ body {
 .stop-scroll {
     overflow: hidden;
 }
+
+@media screen and (max-width: 468px) {
+    .container {
+        padding: 0 15px;
+        max-width: 1202px;
+    }
+}

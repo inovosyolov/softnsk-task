@@ -37,17 +37,17 @@
         height: 190px;
         bottom: -208px;
         display: none;
-        gap: 10px;
         flex-direction: column;
+        gap: 10px;
+        padding: 6px 10px 10px 10px;
+        font-size: 18px;
+        color: $white-color;
         background-color: #272733;
         border: 1px solid #3D4050;
         border-radius: 3px;
-        padding: 6px 10px 10px 10px;
         list-style-type: none;
-        box-sizing: border-box;
         overflow-y: scroll;
-        color: #FFF;
-        font-size: 18px;
+        z-index: 1;
 
         &::-webkit-scrollbar {
             width: 7px;
@@ -72,7 +72,7 @@
         padding: 7px 0;
         font-weight: 400;
         font-size: 17px;
-        color: #FFF;
+        color: $white-color;
         user-select: none;
         transition: color $transition-timing $transition-curve;
 
@@ -87,12 +87,40 @@
             background: #3D4050;
             border-radius: 3px 3px 0px 0px;
             border: 1px solid #3D4050;
-            color: #FFF;
+            color: $white-color;
         }
 
         .select-menu__arrow-icon {
             transform: rotate(180deg);
             fill: $white-color;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .select-menu {
+        &__title {
+            font-size: 16px;
+        }
+
+        &__item {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .select-menu {
+        &__header {
+            padding: 10px;
+        }
+
+        &__title {
+            font-size: 13px;
+        }
+
+        &__item {
+            font-size: 13px;
         }
     }
 }

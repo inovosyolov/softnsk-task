@@ -1,12 +1,12 @@
 .intro {
-    background: url(../img/main-bg.jpg) no-repeat center / cover;
-    line-height: 1.2em;
+    padding: 203px 0 200px;
+    background: url(../img/main-bg.jpg) no-repeat;
+    background-position: right 0;
 
     &__wrapper {
         display: flex;
         flex-direction: column;
         gap: 85px;
-        padding: 203px 0 202px;
     }
 
     &__title {
@@ -84,6 +84,96 @@
                     background: $white-color;
                     color: #2A2B30;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .intro {
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .intro {
+        background: linear-gradient(to right,rgba(39,39,51,.65) 0 100%), url(../img/main-bg-laptop.jpg) no-repeat center / right cover;
+        background-position: right;
+        background-size: cover;
+
+        &__title {
+            max-width: 600px;
+            color: $white-color;
+
+            &_blue {
+                color: $blue-color;
+            }
+        }
+
+        &__content {
+            color: $white-color;
+
+            &-item {
+                &::before {
+                    background: $white-color;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .intro {
+        padding: 150px 0 100px;
+
+        &__wrapper {
+            gap: 60px;
+        }
+
+        &__title {
+            font-size: 42px;
+        }
+
+        &__content {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .intro {
+        padding: 120px 0 80px;
+
+        &__wrapper {
+            gap: 50px;
+        }
+
+        &__title {
+            font-size: 35px;
+        }
+
+        &__content {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .intro {
+        background: linear-gradient(to right,rgba(39,39,51,.65) 0 100%), url(../img/main-bg-mobile.jpg) no-repeat center / right cover;
+        padding: 100px 0 60px;
+
+        &__title {
+            max-width: 100%;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        &__content {
+            font-size: 14px;
+
+            &-buttons-wrap {
+                gap: 15px;
             }
         }
     }

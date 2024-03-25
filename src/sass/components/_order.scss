@@ -1,12 +1,11 @@
 .order {
+    padding: 120px 0 150px 0;
     background: #272733 url(../img/order-bg.png) no-repeat center / cover;
 
     &__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 80px;
-        padding: 120px 0 150px 0;
     }
 
     &__description {
@@ -15,6 +14,8 @@
         justify-content: center;
         align-items: center;
         gap: 30px;
+        margin-bottom: 80px;
+        text-align: center;
     
         &-title {
             margin: 0;
@@ -33,6 +34,73 @@
             font-size: 18px;
             line-height: 1.2em;
             color: $grey-color;
+        }
+    }
+
+    &__stages {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .order {
+        background: #272733 url(../img/order-bg-laptop.png) no-repeat center / cover;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .order {
+        padding: 80px 0;
+
+        &__description {
+            gap: 20px;
+
+            &-title {
+                font-size: 32px;
+            }
+
+            &-summary {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .order {
+        padding: 60px 0;
+
+        &__description {
+            margin-bottom: 40px;
+
+            &-title {
+                font-size: 26px;
+            }
+
+            &-summary {
+                font-size: 14px;
+            }
+        }
+
+        &__stages {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .order {
+        background: #272733 url(../img/order-bg-mobile.png) no-repeat center / cover;
+        padding: 40px 0;
+
+        &__description {
+            &-title {
+                font-size: 20px;
+            }
+
+            &-summary {
+                font-size: 13px;
+            }
         }
     }
 }

@@ -72,3 +72,75 @@
         padding: 10px;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .header {
+        padding: 25px 0;
+
+        &__nav {
+            &-list {
+                gap: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 20px 0;
+
+        &__logo {
+            width: 200px;
+            height: 20px;
+        }
+
+        &__nav {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            padding: 30px;
+            width: 100%;
+            height: 100vh;
+            background: rgba(16, 16, 29, 0.9);
+            transform: translateX(-100%);
+            transition: transform $transition-timing $transition-curve;
+
+            &-list {
+                flex-direction: column;
+            }
+
+            &-item {
+                font-size: 15px;
+            }
+        }
+
+        &.sticky {
+            padding: 20px 0;
+        }
+    }
+
+    .header__nav.active {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .header {
+        &__logo {
+            width: 170px;
+            height: 15px;
+        }
+
+        &__nav {
+            top: 57px;
+
+            &-list {
+                gap: 30px
+            }
+
+            &-link {
+                font-size: 12px;
+            }
+        }
+    }
+}

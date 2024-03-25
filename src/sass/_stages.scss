@@ -12,8 +12,8 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        margin-bottom: 5px;
-        width: 209px;
+        margin-bottom: 20px;
+        width: 100%;
     }
 
     &__circle {
@@ -70,7 +70,7 @@
         &-list {
             @include list-reset;
             position: absolute;
-            left: 110px;
+            left: 107px;
             display: flex;
             gap: 20px;
         }
@@ -96,5 +96,61 @@
     &::-webkit-scrollbar-thumb {
         background-color: $blue-color;
         border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .stages {
+        &__circle {
+            width: 85px;
+            height: 85px;
+
+            &-icon {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        &__text {
+            font-size: 15px;
+        }
+
+        &__dots {
+            &-list {
+                left: 101px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .stages {
+        &__wrapper {
+            min-width: initial;
+        }
+
+        &__box {
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        &__circle {
+            width: 70px;
+            height: 70px;
+        }
+
+        &__dots {
+            &-list {
+                left: 80px;
+            }
+        }
+
+        &__text {
+            font-size: 13px;
+        }
+
+        &::-webkit-scrollbar {
+            height: 5px;
+        }
     }
 }
