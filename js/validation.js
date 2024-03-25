@@ -12,7 +12,7 @@
             inputs.forEach((input) => {
                 input.style.outlineColor = 'crimson';
                 input.style.outlineStyle = 'solid';
-                input.style.outlineWidth = '2px';
+                input.style.outlineWidth = '1px';
             });
 
             return error;
@@ -48,7 +48,7 @@
         };
 
         const checkName = (name) => {
-            const regExpName = /^[^0-9]+$/;
+            const regExpName = /^(?! )[a-zA-Zа-яА-Я ]+$/;
             return checkInput(name, regExpName, 'Имя должно содержать только буквы', name.parentElement);
         };
 
