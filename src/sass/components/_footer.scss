@@ -33,6 +33,12 @@
         gap: 38px;
     }
 
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
     &__link {
         display: flex;
         align-items: center;
@@ -116,6 +122,10 @@
     .footer {
         &__text {
             font-size: 11px;
+        }
+
+        &__item {
+            gap: 5px;
         }
     }
 }
