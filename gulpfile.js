@@ -1,7 +1,7 @@
 const {src, dest, series, watch} = require('gulp');
 const concat = require('gulp-concat');
 const del = require('del'); // del@6.0.0
-const autoprefixer = require('gulp-autoprefixer'); // gulp-image@8.0.0
+const autoprefixer = require('gulp-autoprefixer'); // gulp-autoprefixer@8.0.0
 const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const svgSprite = require('gulp-svg-sprite');
